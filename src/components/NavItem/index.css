@@ -2,13 +2,12 @@
   color: #ffffff;
   background-color: #202020;
   border: 0.1em solid #ffffff;
-  border-radius: 0.12em;
+  border-radius: 0.42em;
   box-sizing: border-box;
   display: inline-block;
-  font-family: "Roboto", sans-serif;
   font-weight: 300;
   letter-spacing: 2px;
-  margin: 0 0.3em 0.3em 0;
+  margin: 0.3em 0.3em 0.3em 0.3em;
   padding: 0.35em 1.2em;
   text-align: center;
   text-decoration: none;
@@ -18,8 +17,8 @@
 
 .NavItem a:hover {
   background-color: #ffffff;
-  color: #000000;
   border-color: #000000;
+  color: #000000;
 }
 
 @media all and (max-width: 30em) {

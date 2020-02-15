@@ -3,16 +3,15 @@
   box-shadow: 0 1px 2px 1px #666666;
   display: flex;
   justify-content: space-between;
-  padding-top: 5px;
 }
 
 .Topbar-title {
   color: #ffffff;
-  display: flex;
-  letter-spacing: 0.35em;
-  padding: 0.35em 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
-  vertical-align: middle;
+  margin: 0.3em 0.3em 0.3em 0.3em;
+  padding: 0.35em 1.2em;
 }
 
 .Topbar-menu {
@@ -23,6 +22,7 @@
 @media all and (max-width: 30em) {
   .Topbar-menu {
     display: block;
+    padding-right: 0.85em;
   }
 
   .Topbar-menu .NavItem a {
