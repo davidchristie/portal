@@ -1,11 +1,12 @@
 import React from "react";
-import Navigation from "../Navigation";
+import Heading from "../Heading";
 import LoginForm from "../LoginForm";
+import Navigation from "../Navigation";
 
 const LoginPage: React.FunctionComponent = () => {
   return (
     <Navigation>
-      <h1>Login</h1>
+      <Heading>Login</Heading>
       <LoginForm />
     </Navigation>
   );

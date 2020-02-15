@@ -14,7 +14,6 @@ const LoginForm: React.FunctionComponent = () => {
       <TextField
         id="email"
         label="Email"
-        name="email"
         onChange={setEmail}
         type="email"
         value={email}
@@ -22,7 +21,6 @@ const LoginForm: React.FunctionComponent = () => {
       <TextField
         id="password"
         label="Password"
-        name="password"
         onChange={setPassword}
         type="password"
         value={password}

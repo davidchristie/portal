@@ -1,0 +1,7 @@
+.Form {
+  padding: 10px;
+}
+
+.Form > * {
+  margin-bottom: 20px;
+}

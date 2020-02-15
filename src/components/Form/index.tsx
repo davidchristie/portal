@@ -1,4 +1,5 @@
 import React from "react";
+import "./index.css";
 
 interface Props {
   onSubmit: () => void;
@@ -7,6 +8,7 @@ interface Props {
 const Form: React.FunctionComponent<Props> = ({ children, onSubmit }) => {
   return (
     <form
+      className="Form"
       onSubmit={event => {
         event.preventDefault();
         onSubmit();
