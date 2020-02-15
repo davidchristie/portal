@@ -1,17 +1,17 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import { userSelector } from "../../redux/selectors/user";
+import userUser from "../../hooks/useAuthentication";
 import Button from "../Button";
-import { LOGIN_PATH, SIGNUP_PATH } from "../Routes";
+import { LOGIN_PATH, SIGNUP_PATH, HOME_PATH } from "../Routes";
 import "./index.css";
 
 const Topbar: React.FunctionComponent = () => {
-  const user = useSelector(userSelector);
+  const { user } = userUser();
   return (
     <header className="Topbar">
       {user ? (
         <>
+          <NavLink to={HOME_PATH}>Home</NavLink>
           <Button>Logout</Button>
         </>
       ) : (

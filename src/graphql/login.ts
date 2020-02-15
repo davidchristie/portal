@@ -1,5 +1,5 @@
 import { request } from "graphql-request";
-import { gatewayUrl } from ".";
+import { endpoint } from ".";
 
 interface LoginData {
   login: {
@@ -9,12 +9,17 @@ interface LoginData {
 
 export const loginMutation = async (email: string, password: string) => {
   const query = `
-  mutation Login {
-    login(input: { email: "davidchristie.nz@gmail.com", password: "yr2Q5xcn02Z6bMktbKiS" }) {
+  mutation Login($input: LoginInput!) {
+    login(input: $input) {
       accessToken
     }
   }
   `;
-  const variables = { email, password };
-  return request<LoginData>(gatewayUrl, query, variables);
+  const variables = {
+    input: {
+      email,
+      password
+    }
+  };
+  return request<LoginData>(endpoint, query, variables);
 };
