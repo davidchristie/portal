@@ -1,0 +1,16 @@
+.Topbar {
+  background-color: #222;
+  display: flex;
+}
+
+.Topbar a {
+  color: #aaa;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.Topbar a.active {
+  background-color: #282828;
+  color: white;
+  text-decoration: underline;
+}

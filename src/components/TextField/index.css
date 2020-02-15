@@ -1,0 +1,9 @@
+.TextField {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.TextField input {
+  padding: 5px;
+}
