@@ -4,7 +4,6 @@ import "./index.css";
 interface Props {
   id: string;
   label: string;
-  name: string;
   onChange: (value: string) => void;
   type?: string;
   value: string;
@@ -13,7 +12,6 @@ interface Props {
 const TextField: React.FunctionComponent<Props> = ({
   id,
   label,
-  name,
   onChange,
   type,
   value
@@ -22,8 +20,9 @@ const TextField: React.FunctionComponent<Props> = ({
     <div className="TextField">
       <label htmlFor={id}>{label}</label>
       <input
+        autoComplete={id}
         id={id}
-        name={name}
+        name={id}
         onChange={event => onChange(event.target.value)}
         type={type}
         value={value}

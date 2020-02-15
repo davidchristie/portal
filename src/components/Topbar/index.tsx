@@ -1,25 +1,30 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import userUser from "../../hooks/useAuthentication";
+import useAuthentication from "../../hooks/useAuthentication";
+import useLogout from "../../hooks/useLogout";
 import Button from "../Button";
+import NavItem from "../NavItem";
 import { LOGIN_PATH, SIGNUP_PATH, HOME_PATH } from "../Routes";
 import "./index.css";
 
 const Topbar: React.FunctionComponent = () => {
-  const { user } = userUser();
+  const { user } = useAuthentication();
+  const logout = useLogout();
   return (
     <header className="Topbar">
-      {user ? (
-        <>
-          <NavLink to={HOME_PATH}>Home</NavLink>
-          <Button>Logout</Button>
-        </>
-      ) : (
-        <>
-          <NavLink to={SIGNUP_PATH}>Signup</NavLink>
-          <NavLink to={LOGIN_PATH}>Login</NavLink>
-        </>
-      )}
+      <div className="Topbar-title">Portal</div>
+      <div className="Topbar-menu">
+        {user ? (
+          <>
+            <NavItem to={HOME_PATH}>Home</NavItem>
+            <Button onClick={logout}>Logout</Button>
+          </>
+        ) : (
+          <>
+            <NavItem to={SIGNUP_PATH}>Signup</NavItem>
+            <NavItem to={LOGIN_PATH}>Login</NavItem>
+          </>
+        )}
+      </div>
     </header>
   );
 };

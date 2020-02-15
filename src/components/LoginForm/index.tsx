@@ -2,6 +2,7 @@ import React from "react";
 import useLogin from "../../hooks/useLogin";
 import Button from "../Button";
 import Form from "../Form";
+import Row from "../Row";
 import TextField from "../TextField";
 
 const LoginForm: React.FunctionComponent = () => {
@@ -14,7 +15,6 @@ const LoginForm: React.FunctionComponent = () => {
       <TextField
         id="email"
         label="Email"
-        name="email"
         onChange={setEmail}
         type="email"
         value={email}
@@ -22,14 +22,15 @@ const LoginForm: React.FunctionComponent = () => {
       <TextField
         id="password"
         label="Password"
-        name="password"
         onChange={setPassword}
         type="password"
         value={password}
       />
-      <Button disabled={!canSubmit} type="submit">
-        Submit
-      </Button>
+      <Row right>
+        <Button disabled={!canSubmit} type="submit">
+          Submit
+        </Button>
+      </Row>
     </Form>
   );
 };

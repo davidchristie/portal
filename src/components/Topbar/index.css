@@ -1,16 +1,31 @@
 .Topbar {
   background-color: #222;
+  box-shadow: 0 1px 2px 1px #666666;
   display: flex;
+  justify-content: space-between;
 }
 
-.Topbar a {
-  color: #aaa;
-  padding: 10px;
-  text-decoration: none;
+.Topbar-title {
+  color: #ffffff;
+  font-weight: 300;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin: 0.3em 0.3em 0.3em 0.3em;
+  padding: 0.35em 1.2em;
 }
 
-.Topbar a.active {
-  background-color: #282828;
-  color: white;
-  text-decoration: underline;
+.Topbar-menu {
+  display: flex;
+  transition: all 0.2s;
+}
+
+@media all and (max-width: 30em) {
+  .Topbar-menu {
+    display: block;
+    padding-right: 0.85em;
+  }
+
+  .Topbar-menu .NavItem a {
+    width: 100%;
+  }
 }

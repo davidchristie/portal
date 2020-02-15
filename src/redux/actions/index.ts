@@ -3,6 +3,7 @@ import {
   LoginRequestAction,
   LoginSuccessAction
 } from "./login";
+import { LogoutAction } from "./logout";
 import {
   SignupErrorAction,
   SignupRequestAction,
@@ -15,6 +16,7 @@ import {
 } from "./user";
 
 export * from "./login";
+export * from "./logout";
 export * from "./signup";
 export * from "./user";
 
@@ -25,6 +27,7 @@ export type ActionType =
   | LoginErrorAction
   | LoginRequestAction
   | LoginSuccessAction
+  | LogoutAction
   | SignupErrorAction
   | SignupRequestAction
   | SignupSuccessAction;

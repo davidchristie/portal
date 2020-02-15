@@ -1,10 +1,11 @@
 import React from "react";
+import Heading from "../Heading";
 import Navigation from "../Navigation";
 
 const HomePage: React.FunctionComponent = () => {
   return (
     <Navigation>
-      <h1>Home</h1>
+      <Heading>Home</Heading>
     </Navigation>
   );
 };
