@@ -1,1 +1,1 @@
-export const gatewayUrl = "https://morning-ravine-33710.herokuapp.com/query";
+export const endpoint = "https://morning-ravine-33710.herokuapp.com/query";

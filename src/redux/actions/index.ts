@@ -1,14 +1,30 @@
-import { AnyAction } from "redux";
 import {
   LoginErrorAction,
   LoginRequestAction,
   LoginSuccessAction
 } from "./login";
+import {
+  SignupErrorAction,
+  SignupRequestAction,
+  SignupSuccessAction
+} from "./signup";
+import {
+  GetUserErrorAction,
+  GetUserRequestAction,
+  GetUserSuccessAction
+} from "./user";
 
 export * from "./login";
+export * from "./signup";
+export * from "./user";
 
 export type ActionType =
-  | AnyAction
+  | GetUserErrorAction
+  | GetUserRequestAction
+  | GetUserSuccessAction
   | LoginErrorAction
   | LoginRequestAction
-  | LoginSuccessAction;
+  | LoginSuccessAction
+  | SignupErrorAction
+  | SignupRequestAction
+  | SignupSuccessAction;
