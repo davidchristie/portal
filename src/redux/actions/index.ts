@@ -5,6 +5,14 @@ import {
 } from "./login";
 import { LogoutAction } from "./logout";
 import {
+  CreateNoteErrorAction,
+  CreateNoteRequestAction,
+  CreateNoteSuccessAction,
+  DeleteNoteErrorAction,
+  DeleteNoteRequestAction,
+  DeleteNoteSuccessAction
+} from "./notes";
+import {
   SignupErrorAction,
   SignupRequestAction,
   SignupSuccessAction
@@ -21,6 +29,12 @@ export * from "./signup";
 export * from "./user";
 
 export type ActionType =
+  | CreateNoteErrorAction
+  | CreateNoteRequestAction
+  | CreateNoteSuccessAction
+  | DeleteNoteErrorAction
+  | DeleteNoteRequestAction
+  | DeleteNoteSuccessAction
   | GetUserErrorAction
   | GetUserRequestAction
   | GetUserSuccessAction

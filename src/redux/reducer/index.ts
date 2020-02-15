@@ -1,11 +1,13 @@
 import { combineReducers, Reducer } from "redux";
 import { ActionType, LOGOUT } from "../actions";
 import authentication from "./authentication";
+import notes from "./notes";
 
 export type RootState = ReturnType<typeof combined>;
 
 const combined = combineReducers({
-  authentication
+  authentication,
+  notes
 });
 
 const rootReducer: Reducer<RootState, ActionType> = (state, action) => {

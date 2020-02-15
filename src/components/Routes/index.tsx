@@ -4,10 +4,12 @@ import useAuthentication from "../../hooks/useAuthentication";
 import HomePage from "../HomePage";
 import LoadingPage from "../LoadingPage";
 import LoginPage from "../LoginPage";
+import NotesPage from "../NotesPage";
 import SignupPage from "../SignupPage";
 
 export const HOME_PATH = "/";
 export const LOGIN_PATH = "/login";
+export const NOTES_PATH = "/notes";
 export const SIGNUP_PATH = "/signup";
 
 const Routes: React.FunctionComponent = () => {
@@ -19,14 +21,20 @@ const Routes: React.FunctionComponent = () => {
     <Switch>
       {user == null ? (
         <>
-          <Route component={LoginPage} path={LOGIN_PATH} />
+          <Route component={LoginPage} exact path={LOGIN_PATH} />
           <Route component={SignupPage} path={SIGNUP_PATH} />
           <Route path="*">
             <Redirect to={SIGNUP_PATH} />
           </Route>
         </>
       ) : (
-        <Route component={HomePage} path={HOME_PATH} />
+        <>
+          <Route component={HomePage} exact path={HOME_PATH} />
+          <Route component={NotesPage} exact path={NOTES_PATH} />
+          <Route path="*">
+            <Redirect to={HOME_PATH} />
+          </Route>
+        </>
       )}
     </Switch>
   );
