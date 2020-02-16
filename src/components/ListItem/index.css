@@ -1,0 +1,9 @@
+.ListItem {
+  border-radius: 0.45em;
+  display: flex;
+  box-shadow: 0.1em 0.1em 0.2em 0.1em #000000;
+  list-style: none;
+  justify-content: space-between;
+  margin-bottom: 0.85em;
+  padding: 0.25em 0.85em;
+}

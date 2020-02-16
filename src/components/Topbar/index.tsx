@@ -3,7 +3,7 @@ import useAuthentication from "../../hooks/useAuthentication";
 import useLogout from "../../hooks/useLogout";
 import Button from "../Button";
 import NavItem from "../NavItem";
-import { LOGIN_PATH, SIGNUP_PATH, HOME_PATH } from "../Routes";
+import { LOGIN_PATH, HOME_PATH, NOTES_PATH, SIGNUP_PATH } from "../Routes";
 import "./index.css";
 
 const Topbar: React.FunctionComponent = () => {
@@ -16,6 +16,7 @@ const Topbar: React.FunctionComponent = () => {
         {user ? (
           <>
             <NavItem to={HOME_PATH}>Home</NavItem>
+            <NavItem to={NOTES_PATH}>Notes</NavItem>
             <Button onClick={logout}>Logout</Button>
           </>
         ) : (

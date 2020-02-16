@@ -20,7 +20,7 @@ const initialState: AuthenticationState = {
   user: null
 };
 
-const userReducer: Reducer<AuthenticationState, ActionType> = (
+const authenticationReducer: Reducer<AuthenticationState, ActionType> = (
   state = initialState,
   action
 ): AuthenticationState => {
@@ -57,4 +57,4 @@ const userReducer: Reducer<AuthenticationState, ActionType> = (
   }
 };
 
-export default userReducer;
+export default authenticationReducer;
