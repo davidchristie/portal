@@ -10,7 +10,10 @@ import {
   CreateNoteSuccessAction,
   DeleteNoteErrorAction,
   DeleteNoteRequestAction,
-  DeleteNoteSuccessAction
+  DeleteNoteSuccessAction,
+  UpdateNoteErrorAction,
+  UpdateNoteRequestAction,
+  UpdateNoteSuccessAction
 } from "./notes";
 import {
   SignupErrorAction,
@@ -44,4 +47,7 @@ export type ActionType =
   | LogoutAction
   | SignupErrorAction
   | SignupRequestAction
-  | SignupSuccessAction;
+  | SignupSuccessAction
+  | UpdateNoteErrorAction
+  | UpdateNoteRequestAction
+  | UpdateNoteSuccessAction;
