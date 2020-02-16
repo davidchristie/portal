@@ -1,5 +1,6 @@
 import React from "react";
 import Topbar from "../Topbar";
+import "./index.css";
 
 const Navigation: React.FunctionComponent = ({ children }) => {
   return (
