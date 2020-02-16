@@ -1,3 +1,7 @@
 .Heading {
-  padding-left: 10px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }

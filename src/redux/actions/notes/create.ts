@@ -1,3 +1,4 @@
+import { Note } from "../../../types";
 import { ActionType } from "..";
 
 export interface CreateNoteErrorAction {
@@ -13,10 +14,7 @@ export interface CreateNoteRequestAction {
 }
 
 export interface CreateNoteSuccessAction {
-  payload: {
-    id: string;
-    title: string;
-  };
+  payload: Note;
   type: typeof CREATE_NOTE_SUCCESS;
 }
 
@@ -36,10 +34,7 @@ export const createNoteRequest = (title: string): ActionType => ({
   type: CREATE_NOTE_REQUEST
 });
 
-export const createNoteSuccess = (id: string, title: string): ActionType => ({
-  payload: {
-    id,
-    title
-  },
+export const createNoteSuccess = (note: Note): ActionType => ({
+  payload: note,
   type: CREATE_NOTE_SUCCESS
 });

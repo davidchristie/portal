@@ -1,3 +1,4 @@
+import { EditorState } from "draft-js";
 import { useDispatch } from "react-redux";
 import {
   createNoteRequest,
@@ -9,7 +10,13 @@ const useCreateNote = () => {
   return async () => {
     dispatch(createNoteRequest("Untitled"));
     const id = String(Math.random());
-    dispatch(createNoteSuccess(id, "Untitled"));
+    dispatch(
+      createNoteSuccess({
+        id,
+        text: EditorState.createEmpty(),
+        title: "Untitled"
+      })
+    );
   };
 };
 
